@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+                <div class="card-body p-4 p-sm-5">
+                    <div class="tab">
+                        <button class="tablinks" onclick="tabnName(event, 'registrationForm')"> Members Registration</button><br>
+                        <button class="tablinks" onclick="tabnName(event, 'ListPendaftar')">Member Data List</button>
+                    </div>
+                    <div id="registrationForm" class="tabcontent" style="display:block" >
+                        <h5 class="card-title text-center md-5 fw-light fs-5"> Members Registration</h5>
+                        <form id="registrationFormInput" onsubmit="return validateForm()">
+                            <div class="form-floating mb-3">
+                                <input type="text" id="name" class="form-control" placeholder="Full Name" autocomplete="off">
+                                <label for="name">Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" id="age" class="form-control" placeholder="age" autocomplete="off">
+                                <label for="age">Age</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" id="allowance" class="form-control" placeholder="allowance" autocomplete="off">
+                                <label for="allowance">Allowance</label>
+                            </div>
+                            <div class="d-grid">
+                                <button onclick="getDataInput()" class="btn btn-primary btn-login text-uppercase fw-bold" value="submit" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="ListPendaftar" class="tabcontent">
+                    <h5 class="card-title text-center md-5 fw-light fs-5">Member Data List</h5>
+                    <table id="pendaftarTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>Age</th>
+                                <th>Allowance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+                    <p>Average Allowance Value  <span id="avgallowance">0
+                    </span> Average Age Value <span id="avgage">0</span></p> <br><br>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<script src="./index.js" type="text/javascript"></script>
+
+
+</body>
+</html>
